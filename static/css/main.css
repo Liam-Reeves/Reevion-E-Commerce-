@@ -1,11 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}       
+}    
+
+.marquee-container{
+    background: #111111;
+    height:80px;
+}
+.marquee-container marquee{
+    color: #fff;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    align-items: center;
+    margin-top: 20px;
+    }
 .navigation{
+    background-color: #e5e2db;
     width: 100%;
     height: 100%;
     box-shadow: 4px 4px 8px #0b0b0b;
@@ -23,13 +41,160 @@
     font-family: "Karla", sans-serif;
     font-size: 18px;
     gap: 20px;
-    text-decoration: none; /* Removes underline from links */
-    transform: translateY(0); /* Ensure initial position is set */
-    transition: transform 0.5s ease, color 0.5s ease; /* Smooth animations for hover effects */
+    color: #111111;
+    text-decoration: none; 
+    transform: translateY(0); 
+    transition: transform 0.5s ease, color 0.5s ease; 
 }
 
 .nav-item .nav-link:hover {
-    color: #ffd481; /* Changes link color on hover */
-    transform: translateY(-10px); /* Moves the link up smoothly */
+    color: #ffd481; 
+    transform: translateY(-10px);
+}
+#home-section{
+    width: 100%;
+
+}
+.ld-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    background:#ffd481;
+    overflow: hidden;
+   
+
+}
+.ld-container p{
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    font-style: bold;
+}
+@keyframes slideInimg{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity:1
+    }
+}
+.ld-container img{
+    width: 580px;
+    height: 580px;
+    transition: transform 0.5s ease;
+    animation: slideInimg 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+.slide-in{
+    animation: slideIn 1.5s ease-out; 
+}
+#home-btn{
+        position: relative;
+        width: 120px;
+        height: 40px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        padding: 12px;
+        gap: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      
+
+.ctg-section{
+  overflow: hidden;
+  background: #fff; vb
+}
+.ctg-section p{
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    font-style: bold;
+    text-align: left;
+    padding: 50px 50px;
+    color: #111111;
+   
+}
+.ctg-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+   
+}
+.ctg-card{
+    width:  200px;
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+    background: lightgrey;
+    transition: transform 1.5s ease-in-out;
+    animation: cardIn 1s   ease-in-out;
+}
+.ctg-card img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    
+
+}
+.ctg-card:hover{
+    transform: translateY(-10px);
+
+}
+@keyframes cardIn{
+    from{
+        transform: translateX(-100%);
+        opacity:0;
+
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+.card-overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c ,58%);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+.card-overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.ctg-card:hover .card-overlay{
+    height: 100%;
+    
 }
 

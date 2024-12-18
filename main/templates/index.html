@@ -5,14 +5,73 @@
 
 {% block body %}
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
-<section class="home">
-    <div class="container">
+<section id="home-section">
+    <div class="ld-container">
         <div>
-            <h1></h1>
+            <p class="slide-in">Great Deals! <br>End of Year Sale</p>
+            <button id="home-btn" class="slide-in">Shop Now</button>
+        </div>
+        <img class="slide-in-right"  src="{% static 'assets/flash_sale.png' %}" alt="">
+    </div>
+    <div class="ctg-section">
+        <p> Browse by Category</p>
+        <div class="ctg-cards">
+            <div class="ctg-card">
+                <img src="{% static 'assets/charger.png' %}" alt="">
+                    <div class="card-overlay">
+                        <h3>Ultra fast chargers!</h3>
+                    </div>  
+            </div>
+            <div class="ctg-card">
+                <img src="{% static 'assets/charger.png' %}" alt="">
+                <div class="card-overlay">
+                    <h3>Ultra fast chargers!</h3>
+                </div>  
+            </div>
+            <div class="ctg-card">
+                <img src="{% static 'assets/charger.png' %}" alt="">
+                <div class="card-overlay">
+                    <h3>Ultra fast chargers!</h3>
+                </div>  
+            </div>
+            <div class="ctg-card">
+                <img src="{% static 'assets/charger.png' %}" alt="">
+                <div class="card-overlay">
+                    <h3>Ultra fast chargers!</h3>
+                </div>  
+            </div>
         </div>
     </div>
 
+    <div class="ftr-section">
+        <h1>Featured Products</h1>
+        <div class="pd-cards">
+            <div class="pd-card">
+                <img src="" alt="">
+                <div class="pd-info">
+                    <h1>Great price</h1>
+                </div>
+                </div>
+        </div>
+      
+    </div>
+    <div class="quality-assurance">
+        <div class="">
+            <div class="qa-cards">
+                <div class="qa-card">
+                    <div class="qa-text">
+                        <h1>Quality Assurance</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at velit vel velit pharetra faucibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newsletter-section">
+        div.
+    </div>
 </section>
+
 
 
 
