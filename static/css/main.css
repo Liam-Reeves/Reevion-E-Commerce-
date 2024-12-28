@@ -211,6 +211,7 @@ html{
     font-size: 2rem;
     font-weight: 510;
     padding-bottom: 30px;
+    font-family: "Playfair Display", serif;
   }
   .why-us-heading span {
     color: #8357a8;
@@ -235,9 +236,10 @@ html{
   }
   .why-us-card h4 {
     font-size: 20px;
+    font-family: "Playfair Display", serif;
   }
   .why-us-card p {
-    font-size: 12px;
+    font-size: 12px; 
   }
   .why-us-card:hover {
     color: #f1f1f1;
@@ -247,7 +249,28 @@ html{
   }
   
   .why-us-card i {
-    color: #111111;
+    color: #ffd481;
     font-size: 50px;
   }
+@keyframes whyusSlide{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.whyusanim{
+    animation: whyusSlide 1s ease-out ;
+}
+
+.ft-section{
+    margin: 20px 20px;
+
+
+}
+
+
 

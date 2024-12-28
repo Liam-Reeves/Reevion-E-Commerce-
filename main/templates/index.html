@@ -4,6 +4,7 @@
 
 
 {% block body %}
+    <!-- Home Section -->
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
 <section id="home-section">
     <div class="ld-container">
@@ -45,30 +46,30 @@
         </div>
     </div>
     <!-- Why us section -->
-<h2 class="why-us-heading">Why Choose <span>Zipky</span></h2>
+<h2 class="why-us-heading">Why Choose <span>Us</span></h2>
 <div class="why-us-container">
   <div class="why-us-card-container">
-    <div class="why-us-card">
+    <div class="why-us-card whyusanim ">
       <i class="fa-solid fa-heart"></i>
       <h4>Satisfaction Guarantee</h4>
       <p>
         We're here to help you find the perfect phone and laptop accessories.
       </p>
     </div>
-    <div class="why-us-card">
+    <div class="why-us-card whyusanim">
       <i class="fa-solid fa-shield-alt"></i>
       <h4>Warranty</h4>
       <p>We offer a 1 year warranty on all our products</p>
       <p></p>
     </div>
-    <div class="why-us-card">
+    <div class="why-us-card whyusanim">
       <i class="fa-solid fa-bullhorn"></i>
       <h4>Customer Service</h4>
       <p>
         We're here to help you find the perfect phone and laptop accessories.
       </p>
     </div>
-    <div class="why-us-card">
+    <div class="why-us-card whyusanim">
       <i class="fa-solid fa-truck"></i>
       <h4>Free Delivery</h4>
       <p>
@@ -77,12 +78,73 @@
     </div>
   </div>
 </div>
+<!-- Featured products -->
+ <section class="ft-section">
+  <div class="ft-products"></div>
+    <h1>Best Selling Products</h1>
+    <div class="ft-cards">
+      <div class="ft-card">
+        <img src="" alt="">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <a href=""><button>Add to Cart</button></a>
+      </div>
+    </div>
 
+  </div>
+ </section>
 
+ <!-- Brand section -->
+   <section class="brand-section">
+    <h1>Our Brands</h1>
+    <div class="brand-cards">
+      <div class="brand-card">
+        <img src="{% static 'assets/apple.png' %}" alt="">
+      </div>
+      <div class="brand-card">
+        <img src="{% static 'assets/samsung.png' %}" alt="">
+      </div>
+      <div class="brand-card">
+        <img src="{% static 'assets/xiaomi.png' %}" alt="">
+      </div>
+      <div class="brand-card">
+        <img src="{% static 'assets/huawei.png' %}" alt="">
+      </div>
+    </div>
+   </section>
+
+<!-- Testimonials Section -->
+<!-- Newsletter Section -->
     <div class="newsletter-section">
-        div.
+        <div class="nls-input">
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="nlt-form">
+              {{newsletterform.email}}
+              <a href="{% url 'subscribe'%}"><button>Submit</button></a>
+            </div>
+          </form>
+        </div>
     </div>
 </section>
+ <!-- Footer section -->
+   <footer>
+    <div class="footer-links">
+      <div class="bottom-links">
+
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-solid fa-youtube"></i></a>
+      </div>
+    </div>
+    <p>�� 2022 All rights reserved.</p>
+   </footer>
 
 
 
