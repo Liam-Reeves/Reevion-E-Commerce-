@@ -266,11 +266,126 @@ html{
     animation: whyusSlide 1s ease-out ;
 }
 
-.ft-section{
-    margin: 20px 20px;
+.ft-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .ft-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
 
+.ft-cards {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    flex-wrap: wrap;
+    padding-top: 10px;
+    justify-content: space-around;
+    gap:20px;
+    align-items: center;
+}
+.ft-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+.ft-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 
+.ft-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .ft-card-text {
+    padding: 15px;
+    text-align: left;
+  }
+  .ft-card-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+.ft-card-text p {
+    font-size: 1rem;
+    color: #888;
+}
+ .rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .rating i {
+    color: #f39c12; 
+    margin: 0 2px;
+  }
+  
+
+.ft-card-btn {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  }
+.ft-card a button{
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #007bff; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  }
+  
+.ft-card-btn button:hover {
+    background-color: #0056b3; 
+  }
+  
+.brand-section{
+  margin-top: 20px;
+  padding: 20px 20px;
+  align-items: center;
+  background: #f8f9fa;
 }
 
+.brand-section h1{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  font-family:  "Playfair Display", serif;
+  color: #111111;
+  align-items: center;
+}
+.brand-container{
+  display:inline-block;
+  grid-template-columns:repeat(3, 1fr) ;
+  align-items: center;
+  gap: 20px !important;
+  padding-left: 50px;
+  padding-right: 50px;
 
-
+}
+.brand-imgs img{
+  gap: 20px;
+  width: 100px;
+  height: 100px;
+}
+ 

@@ -80,42 +80,44 @@
 </div>
 <!-- Featured products -->
  <section class="ft-section">
-  <div class="ft-products"></div>
     <h1>Best Selling Products</h1>
+    {% for featured_products in featured_products %}
     <div class="ft-cards">
       <div class="ft-card">
-        <img src="" alt="">
+        <img src="{{ featured_products.image.url }}" alt="">
+          <div class="ft-card-text">
+          <h3>{{ featured_products.title }}</h3>
+          <p>{{ featured_products.price }}</p>
+          </div>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </div>
-        <a href=""><button>Add to Cart</button></a>
-      </div>
+        <div class="ft-card-btn">
+          <a href="">
+            <button>Add to Cart</button>
+            <button>View Info</button>
+          </a>
+        </div>
+ 
+          </div>
+    
+      {% endfor %}
     </div>
-
   </div>
  </section>
-
  <!-- Brand section -->
    <section class="brand-section">
     <h1>Our Brands</h1>
-    <div class="brand-cards">
-      <div class="brand-card">
-        <img src="{% static 'assets/apple.png' %}" alt="">
-      </div>
-      <div class="brand-card">
-        <img src="{% static 'assets/samsung.png' %}" alt="">
-      </div>
-      <div class="brand-card">
-        <img src="{% static 'assets/xiaomi.png' %}" alt="">
-      </div>
-      <div class="brand-card">
-        <img src="{% static 'assets/huawei.png' %}" alt="">
-      </div>
+    {% for brands in brands %}
+    <div class="brand-container">
+    <div class="brand-imgs">
+      <img src=" {{ brands.brand_image.url }}" alt="">
     </div>
-   </section>
-
+    </div>
+    {% endfor %}
+ </section>
 <!-- Testimonials Section -->
 <!-- Newsletter Section -->
     <div class="newsletter-section">
