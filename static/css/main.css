@@ -388,4 +388,134 @@ html{
   width: 100px;
   height: 100px;
 }
- 
+.nlt-container {
+  background: linear-gradient(150deg, #8357a8, #0b0b0b);
+  padding: 60px;
+  height: 280px;
+}
+.nlt-text {
+  float: left;
+  margin-left: 200px;
+}
+.nlt-form {
+  float: right;
+  margin-right: 200px;
+}
+.nlt-text h2 {
+  font-size: 2rem;
+  color: #0b0b0b;
+}
+.nlt-text p {
+  padding-left: 30px;
+  font-size: 15px;
+}
+.nlt-form a button {
+  text-align: center;
+  overflow: hidden;
+  font-size: 14px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: #000;
+  color: #8357a8;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.nlt-form a button:hover {
+  background-color: #8357a8;
+  color: #fff;
+  transform: translateY(-10px);
+}
+.email-input {
+  overflow: hidden;
+  padding-left: 20px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.email-input:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER SECTION */
+.footer-container {
+  padding-top: 30px;
+  background-color: #cac5c5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.footer-logo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.footer-address h3 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.footer-address span {
+  color: #8357a8;
+}
+.footer-address p {
+  padding: 20px;
+}
+.footer-links h3 {
+  font-size: 18px;
+}
+.footer-links ul  a {
+  list-style-type: none;
+  text-decoration: none;
+  margin-bottom: 10px;
+  gap: 30px;
+  color: #0b0b0b;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+.footer-links ul li a:hover {
+  color: #8357a8;
+  transform: translateY(-5px);
+}
+.footer-social-media p {
+  font-size: 20px;
+}
+.footer-social-media ul {
+  padding-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.footer-social-media p {
+  font-size: 20px;
+}
+.footer-social-media span {
+  color: #8357a8;
+}
+.footer-social-media ul li a i {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #8357a8;
+  text-align: center;
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid;
+  box-shadow: 0px 0px 10px #2a2a2e;
+}
+.footer-social-media ul li a i:hover {
+  transform: translateY(-10px);
+  background-color: #000;
+  color: #8357a8;
+}

@@ -95,9 +95,8 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="ft-card-btn">
-          <a href="">
-            <button>Add to Cart</button>
-            <button>View Info</button>
+                   <a href=""><button>Add to Cart</button></a>
+       
           </a>
         </div>
  
@@ -120,33 +119,78 @@
  </section>
 <!-- Testimonials Section -->
 <!-- Newsletter Section -->
-    <div class="newsletter-section">
-        <div class="nls-input">
-          <form action="" method="post">
-            {% csrf_token %}
-            <div class="nlt-form">
-              {{newsletterform.email}}
-              <a href="{% url 'subscribe'%}"><button>Submit</button></a>
-            </div>
-          </form>
-        </div>
+<section id="nlt-section">
+  <div class="nlt-container">
+    <div class="nlt-text">
+      <h2>Subscribe to our <span>Channels</span></h2>
+      <p>Stay updated with the latest products and offers</p>
     </div>
+    <form method="POST" action="{% url 'index' %}">
+        {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+        <div class="nlt-form">
+          {{newsletterform.email}}
+        <a href="{% url  'subscribe' %}"><button type="submit">Subscribe</button></a>
+          </div>
+      </form>
+  </div>
 </section>
- <!-- Footer section -->
-   <footer>
-    <div class="footer-links">
-      <div class="bottom-links">
-
-      </div>
-      <div class="social-links">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-solid fa-youtube"></i></a>
-      </div>
+<!-- Footer  section -->
+<section id="footer-section">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="{% static  'assets/zipky-logo.jpg' %}" alt="" />
     </div>
-    <p>�� 2022 All rights reserved.</p>
-   </footer>
+    <div class="footer-address">
+      <h3>Find <span>Us</span></h3>
+      <p><b>Physical location: <br>
+      </b>
+        RNG Plaza, 3rd Floor, Ronald Ngala Street, Nairobi <br>
+        
+        Viking House, 1st Floor, Westlands, Nairobi <br>
+        
+        Beaver House, 1st Floor, Tom Mboya Street, Nairobi <br> 
+
+        <b> Opening Hours: </b><br>
+
+          Mon - Sat <br>
+          
+          9AM - 7PM <br>
+         
+        <b>Sunday</b><br>
+          
+          10AM - 6PM <br>
+          
+         <b>Phone Number:</b><br>
+          
+          (+254) 728274594<br>
+          
+          (+254) 733131155<br>
+          
+          (+254) 725646962</p>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <h3>Quick Links</h3>
+        <a href="">Products</a>
+      <a href="">How to Shop</a>
+        <a href="">Checkout Error</a>
+        <a href="">Terms and Conditions</a>
+       <a href="">Return and Refund Policy</a>
+        <a href="">Privacy Policy</a>
+      </ul>
+    </div>
+    <div class="footer-social-media ">
+      <p>Follow <span>Us:</span> </p>
+    <ul>
+    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li> 
+    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+    </ul>
+        </div>
+</section>
 
 
 
