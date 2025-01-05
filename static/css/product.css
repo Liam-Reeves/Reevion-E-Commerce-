@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nunito Sans", serif;
+}
+.product-container{
+    padding: 20px 20px ;
+
+}
+.product-container h1{
+    margin: 20px 20px;
+    text-align: justify;
+    line-height: normal;
+}
+.product-card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.product-card-container .card{
+    align-items: center;
+    border: none;
+   
+    transition: all 0.5s ease-in-out;
+
+}
+.product-card-container .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 4px 4px 3;
+
+}

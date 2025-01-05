@@ -12,7 +12,7 @@ def index(request):
            "newsletterform": newsletterform,
            "featured_products": Featured_Products.objects.all(),
            "brands": Brands.objects.all(),
-       
+    
     }
     if request.method == "POST":
         newsletterform = NewsletterForm(request.POST)
@@ -34,5 +34,6 @@ def contact(request):
 def subscribe(request):
     return render (request, "subscribe.html")
 
-    
 
+
+    

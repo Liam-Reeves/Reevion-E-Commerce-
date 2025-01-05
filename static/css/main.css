@@ -150,7 +150,7 @@ html{
     color: #000;
 }
 .ctg-card img{
-     border-radius: 10px;
+   border-radius: 10px;
   width: 100%;
   height: 200px;
   max-width: 100%;
@@ -389,7 +389,7 @@ html{
   height: 100px;
 }
 .nlt-container {
-  background: linear-gradient(150deg, #8357a8, #0b0b0b);
+  background: linear-gradient(45deg, #ffd481, #0b0b0b);
   padding: 60px;
   height: 280px;
 }
@@ -519,3 +519,6 @@ html{
   background-color: #000;
   color: #8357a8;
 }
+
+
+

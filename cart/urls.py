@@ -5,6 +5,6 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns= [
-    path('', views.add_to_cart, name="add_to_cart"),
+    path('', views.cart, name="cart"),
     
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -1,8 +1,5 @@
 {% extends 'layout.html'  %}
-
 {% load static %}
-
-
 {% block body %}
     <!-- Home Section -->
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -14,9 +11,8 @@
         </div>
         <img class="slide-in-right"  src="{% static 'assets/flash_sale.png' %}" alt="">
     </div>
-
     <!-- Category Section -->
-    <div class="ctg-section">
+    <div class="ctg-section">`   
         <p> Browse by Category</p>
         <div class="ctg-cards">
             <div class="ctg-card">
@@ -95,13 +91,9 @@
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="ft-card-btn">
-                   <a href=""><button>Add to Cart</button></a>
-       
-          </a>
-        </div>
- 
-          </div>
-    
+         <a href=""><button>Add to Cart</button></a>
+          </div>  
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -191,8 +183,6 @@
     </ul>
         </div>
 </section>
-
-
 
 
 
