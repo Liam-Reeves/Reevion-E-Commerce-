@@ -1,4 +1,5 @@
 {
-    "editor.fontSize": 13,
-    "editor.fontFamily": "\"Consolas\" ,monospace"
+  "editor.fontSize": 13,
+  "editor.fontFamily": "\"Jetbrains Mono\", \"Menlo\",  Monaco, \"Consolas\", monospace",
+  "editor.cursorBlinking": "expand"
 }
