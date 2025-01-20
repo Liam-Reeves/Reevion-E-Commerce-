@@ -1,53 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: "Nunito Sans", serif;
+.html{
+  scroll-behavior: smooth;
 }
-.product-container{
-   margin-bottom: 30px;
+body {
+  font-family: "Nunito Sans", serif;
+  background: #111111;
+}
+.header-container {
+  max-width: 100%;
+  padding: 50px 50px;
 
 }
-.product-container h1{
-    margin: 50px 50px;
-    text-align: justify;
-    line-height: normal;
-}
-.product-card-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    margin-left: 20px;
-}
-.product-card-container .card{
-    align-items: center;
-    box-shadow: 0 2px 4px #0b0b0b;
-    transition: all 0.5s ease-in-out;
+.product-heading {
+  display: flex;
+  gap: 650px;
+  max-width: 100%;
+  height: 100px;
+  background: #f8f9fa;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  font-size: 25px;
+  text-align: left;
+  font-style: bold;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  color: #111111;
 
 }
-.product-card-container .card:hover{
-    transform: translateY(-10px);
+.product-heading a {
+  text-decoration: none;
+  color: #111111;
+}
+
+.products-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  margin-top: 50px;
 
 
 }
-.product-card-container .card .card-body button{
-    background: #111111;
-    color: #fff;
-    font-size: 14px;
-    border: none;
-    transition: 0.5s ease-in-out;
-    gap: 20px
+/* PRODUCT DESIGN */
+.products-container .card {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background: #F8F8FF;
+  overflow: hidden;
 }
-.product-card-container .card .card-body button:hover{
-    background: #fff;
-    color: #111111;
-    transform: translateY(-5px);
-    border: 1px solid #ccc;
-    
+.products-container .card::before {
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+
+  transition: 0.8s;
 }
-product-card-container .card img{
-    object-fit: contain;
+.products-container .card .imgBox img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
 }
+.products-container .card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+.products-container .card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.products-container .card .contentBox h3 {
+  font-size: 14px;
+  color:#111111;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.products-container .card .contentBox .price {
+  font-size: 18px;
+  color: #111111;
+  font-weight: 700;
+  
+}
+
+.products-container .card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  margin-top: 5px;
+  padding: 10px 30px;
+  color: #111111;
+  text-decoration: none; 
+  background:#5fbbf7 ;
+  border-radius: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+   transition: 0.5s;
+}
+
+.products-container .card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+  height: 300px;
+  width: 500px;
+}
+.products-container .card .contentBox .buy:hover {
+  background: #111111;
+  color: #f8f9fa;
+}
+
+
+
