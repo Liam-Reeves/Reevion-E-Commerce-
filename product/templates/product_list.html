@@ -22,7 +22,7 @@
     </div>
     <section class="heading-container">
       <div class="product-heading">
-        <a href=""><p>SHOP</p></a>
+        <a href="{% url 'product_list' %}""><p>SHOP</p></a>
         <div class="dropdown">
           <button
             class="btn btn-danger dropdown-toggle"
@@ -61,7 +61,7 @@
         <div class="contentBox">
           <h3>JBL headphones</h3>
           <h2 class="price">KSh 2500</h2>
-          <button class="buy" href="">Add to Cart</button>
+          <button class="buy" href="{% url 'cart' %}">Add to Cart</button>
           <button class="buy" href="">Quick View</button>
           <p></p>
         </div>
