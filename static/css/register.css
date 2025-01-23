@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .register-container {
   display: flex;
   justify-content: center;
@@ -55,7 +57,6 @@
 .register-form form button {
   width: 200px;
   height: 50px;
-
   background: #09214b;
   color: #fff;
   border: none;
@@ -116,3 +117,4 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+ 
