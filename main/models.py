@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Newsletter(models.Model):
-    email= models.EmailField(max_length=100, default=True)
+    email= models.EmailField(max_length=100, default="")
     def __str__(self):
         return self.email
     class Meta:
@@ -27,5 +27,6 @@ class Brands(models.Model):
 
     class Meta:
         verbose_name_plural = "Brands"
+        
         
     

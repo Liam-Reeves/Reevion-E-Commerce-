@@ -10,7 +10,6 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-
 .marquee-container {
   background: #111111;
   height: 80px;
@@ -22,10 +21,12 @@ html {
   align-items: center;
   margin-top: 20px;
 }
-.navigation {
-  background-color: #e5e2db;
+.main-navigation {
+  background: #e0e0e0;
   width: 100%;
   height: 100%;
+  filter: blur(-1px);
+  z-index: 1;
   box-shadow: 4px 4px 8px #0b0b0b;
 }
 .mb-3 input {
@@ -37,6 +38,16 @@ html {
   background: transparent;
   color: #0b0b0b;
 }
+.mb-3 input:focus {
+  color: #fff;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  background: #000;
+  transition: 0.1s ease-in;
+
+  transition-property: box-shadow;
+}
+
 .nav-item .nav-link {
   font-family: "Karla", sans-serif;
   font-size: 18px;
@@ -48,7 +59,7 @@ html {
 }
 
 .nav-item .nav-link:hover {
-  color: #ffd481;
+  color: #01303f;
   transform: translateY(-10px);
 }
 #home-section {
@@ -60,7 +71,7 @@ html {
   justify-content: space-around;
   align-items: center;
   padding: 10px 10px;
-  background: #ffd481;
+  background: #007bff;
   overflow: hidden;
 }
 .ld-container p {
@@ -79,10 +90,14 @@ html {
   }
 }
 .ld-container img {
-  width: 580px;
+  width: 500px;
   height: 580px;
-  transition: transform 0.5s ease;
+  transition: 0.3s ease-in-out;
   animation: slideInimg 1.5s ease-out;
+}
+
+.ld-container img:hover {
+  transform: scale(1.1);
 }
 
 @keyframes slideIn {
@@ -193,20 +208,20 @@ html {
   filter: blur(1px);
 }
 .ctg-card:hover .card-overlay {
-  height: 100%;
+  height: 80%;
 }
 
 .why-us-heading {
   margin-top: 80px;
   text-align: center;
   color: #0b0b0b;
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: 510;
   padding-bottom: 30px;
   font-family: "Nunito Sans", serif;
 }
 .why-us-heading span {
-  color: #8357a8;
+  color: rgb(0, 255, 255);
 }
 .why-us-card-container {
   display: flex;
@@ -222,7 +237,7 @@ html {
   width: 250px;
   color: #0b0b0b;
   text-align: center;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   height: 300px;
   border-radius: 20px;
 }
@@ -235,14 +250,17 @@ html {
 }
 .why-us-card:hover {
   color: #f1f1f1;
-  background-color: #616058;
+  background-color: #01303f;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transform: translateY(-10px);
 }
 
 .why-us-card i {
-  color: #ffd481;
+  color: #01303f;
   font-size: 50px;
+}
+.why-us-card:hover i {
+  color: rgb(0, 255, 255);
 }
 @keyframes whyusSlide {
   from {
@@ -280,23 +298,27 @@ html {
   align-items: center;
 }
 .ft-card {
-  background-color: #fff;
+  background-color: #f8f9fa;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: 0.5s ease-in-out;
 }
 .ft-card:hover {
+  color: #fff;
+  background-color: #01303f;
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .ft-card img {
-  width: 100%;
+  width: 300px;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .ft-card-text {
   padding: 15px;
@@ -307,20 +329,20 @@ html {
   margin-bottom: 10px;
   color: #444;
 }
-
+.ft-card:hover h3 {
+  color: #fff;
+}
 .ft-card-text p {
   font-size: 1rem;
   color: #888;
+}
+.ft-card:hover .ft-card-text p {
+  color: #fff;
 }
 .rating {
   display: flex;
   justify-content: center;
   margin: 10px 0;
-}
-
-.rating i {
-  color: #f39c12;
-  margin: 0 2px;
 }
 
 .ft-card-btn {
@@ -376,7 +398,7 @@ html {
   height: 100px;
 }
 .nlt-container {
-  background: linear-gradient(45deg, #ffd481, #0b0b0b);
+  background: linear-gradient(135deg, #007bff, #00a4ef);
   padding: 60px;
   height: 280px;
 }
@@ -430,7 +452,7 @@ html {
 
 /* Footer Section Styling */
 #footer-section {
-  background-color: #1a1a1a;
+  background-color: #01303f;
   color: #fff;
   padding: 40px 20px;
   font-family: "Nunito Sans", serif;
@@ -453,11 +475,11 @@ html {
 .footer-address h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-address span {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-address p {
@@ -471,9 +493,9 @@ html {
 }
 
 .footer-links h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-bottom: 15px;
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-links a {
@@ -486,20 +508,18 @@ html {
 }
 
 .footer-links a:hover {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-social-media {
   text-align: center;
 }
-
 .footer-social-media p {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 .footer-social-media span {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-social-media ul {
@@ -518,5 +538,5 @@ html {
 }
 
 .footer-social-media ul li a:hover {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }

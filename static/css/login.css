@@ -7,7 +7,7 @@
 html {
   scroll-behavior: smooth;
 }
-.register-container {
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +16,10 @@ html {
   margin-bottom: 20px;
   transition: 0.5s ease-in-out;
 }
-.register-container:hover {
+.login-container:hover {
   transform: scale(1.1);
 }
-.register-load {
+.login-load {
   margin-top: 100px;
   height: 520px;
   padding: 20px 20px;
@@ -27,17 +27,18 @@ html {
   align-items: center;
   justify-content: center;
 }
-.register-load img {
+.login-load img {
   align-items: center;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   margin-bottom: 5px;
+  margin-left: 5px;
   transition: 0.5s ease-in-out;
 }
-.register-load img:hover {
+.login-load img:hover {
   transform: scale(1.1);
 }
-.register-load-text {
+.login-load-text {
   padding-top: 50px;
   color: #fff;
   text-align: center;
@@ -45,7 +46,7 @@ html {
   font-weight: 700;
   font-family: "Nunito Sans", sans-serif;
 }
-.register-form {
+.login-form {
   margin-top: 100px;
   background-color: rgb(231, 216, 77);
   width: 400px;
@@ -54,7 +55,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-.register-form form button {
+.login-form form button {
   width: 200px;
   height: 50px;
   background: #09214b;
@@ -67,13 +68,13 @@ html {
   transition: transform 0.3s, box-shadow 0.3s;
   margin-top: 15px;
 }
-.register-form form button:hover {
+.login-form form button:hover {
   background: rgb(231, 216, 77);
   color: #09214b;
   transform: translateY(-10px);
   border: 2px solid #111111;
 }
-.register-form h1 {
+.login-form h1 {
   color: #09214b;
   font-size: 30px;
   font-weight: 700;
@@ -82,7 +83,7 @@ html {
   padding-bottom: 20px;
   text-transform: uppercase;
 }
-.register-form input {
+.login-form input {
   background: #f8f9fa;
   width: 100%;
   height: 40px;
@@ -94,11 +95,11 @@ html {
   font-weight: 500;
   font-family: "Nunito Sans", sans-serif;
 }
-.register-form input:focus {
+.login-form input:focus {
   border: 1px solid #09214b;
   outline-color: rgb(0, 255, 255);
 }
-.register-form .label label {
+.login-form .label label {
   font-size: 16px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;

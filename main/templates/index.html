@@ -9,7 +9,7 @@
             <p class="slide-in">Great Deals! <br>End of Year Sale</p>
             <button id="home-btn" class="slide-in">Shop Now</button>
         </div>
-        <img class="slide-in-right"  src="{% static 'assets/flash_sale.png' %}" alt="">
+        <img class="slide-in-right"  src="{% static 'assets/frontimage.png' %}" alt="">
     </div>
     <!-- Category Section -->
     <div class="ctg-section">`   
@@ -85,16 +85,8 @@
           <h3>{{ featured_products.title }}</h3>
           <p>{{ featured_products.price }}</p>
           </div>
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <div class="ft-card-btn">
-         <a href=""><button>Add to Cart</button></a>
-          </div>  
       </div>
-      {% endfor %}
+        {% endfor %}
     </div>
   </div>
  </section>
