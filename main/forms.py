@@ -14,6 +14,6 @@ email =forms.EmailField(
                   'placeholder': 'Enter your email adddress',
             }
       )
-)  
+)     
     
               

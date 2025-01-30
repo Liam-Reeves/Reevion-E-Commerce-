@@ -21,10 +21,10 @@ from .forms import RegistrationForm
 def register(request):
     registrationform = RegistrationForm()
     if request.method == "POST":
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data["username"]
-            password = form.cleaned_data["password"]
+        registrationform = RegistrationForm(request.POST)
+        if registrationform.is_valid():
+            username = registrationform.cleaned_data["username"]
+            password = registrationform.cleaned_data["password"]
             user = UserRegistration.objects.create_user(username=username, password=password)
             
             login(request, user)
@@ -35,7 +35,7 @@ def register(request):
             form =RegistrationForm()
             
             
-    return render(request, "register.html", {'form': form})
+    return render(request, "register.html", {'form': registrationform})
 
 def login(request):
     if request.method =="POST":
@@ -54,6 +54,7 @@ def login(request):
                 
               
         return render(request, "login", {'error': error_message})
+    return render(request, 'login.html')
     
 def logout(request):
       if request.method =="POST":

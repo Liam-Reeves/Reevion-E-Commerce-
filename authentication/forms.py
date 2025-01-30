@@ -5,9 +5,33 @@ from django.db import models
 from .models import UserRegistration
 
 class RegistrationForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
-    password_confirm = forms.CharField(widget=forms.
-    PasswordInput, label="Confirm Password")
+    
+    username = forms.CharField(
+            max_length=100,
+            widget =forms.TextInput(
+                 attrs={
+                  'class': 'register-input',
+                  'placeholder': 'Username',
+                }
+                
+             )
+            
+            )
+    password = forms.CharField(
+        widget=forms.PasswordInput(
+               attrs={
+                  'class': 'register-input',
+                  'placeholder': 'Password',
+                 }
+        )
+        )
+    password_confirm = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                  'class': 'register-input',
+                  'placeholder': 'Confirm Password',
+                }   
+            ),      label="Confirm Password")
      
     class Meta:
         model = UserRegistration
@@ -22,7 +46,9 @@ class RegistrationForm(forms.ModelForm):
         if password and password_confirm and password != password_confirm:
             raise forms.ValidationError("Passwords do not match")
             
-        return cleaned_data            
+        return cleaned_data 
+    
+               
         
 
         

@@ -82,19 +82,22 @@ html {
   padding-bottom: 20px;
   text-transform: uppercase;
 }
-.register-form input {
+.register-form .form-group .register-input {
   background: #f8f9fa;
   width: 100%;
   height: 40px;
   margin-bottom: 20px;
-
   border: 1px solid #09214b;
   border-radius: 10px;
   font-size: 18px;
   font-weight: 500;
   font-family: "Nunito Sans", sans-serif;
 }
-.register-form input:focus {
+.register-form .form-group input{
+  width: 200px;
+  height: 40px; 
+}
+.register-form .form-group input:focus {
   border: 1px solid #09214b;
   outline-color: rgb(0, 255, 255);
 }
