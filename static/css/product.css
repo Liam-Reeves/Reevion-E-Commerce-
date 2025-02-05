@@ -25,6 +25,26 @@
   height: 100%;
   box-shadow: 4px 4px 8px #0b0b0b;
 }
+.back-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px 20px;
+  cursor: pointer;
+  text-align: center; 
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.back-btn:hover {
+  background: #09214b;
+  color: #fff;
+  transform: translateY(-10px);
+}
 .heading-container {
   max-width: 100%;
   padding: 20px 20px;
@@ -128,7 +148,6 @@
   top: 0;
   opacity: 1;
 }
-
 .mouse {
   height: 300px;
   width: 500px;
@@ -137,14 +156,12 @@
   background: #111111;
   color: #f8f9fa;
 }
-
 .pagination-container {
-  background: #122b3b;
+  background: #007bff;
   height: 200px;
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  margin-bottom: 50px;
 }
 .pagination {
   padding-top: 70px;
@@ -161,40 +178,8 @@
   background: #f8f9fa;
   border: 1px solid #122b3b;
 }
-.footer-assurance-container {
-  background: linear-gradient(40deg, #f8f9fa, #122b3b);
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin-top: 20px;
-}
-.footer-assurance {
-  display: flex;
-  gap: 200px;
-
-  text-decoration: none;
-  padding: 50px 50px;
-}
-.footer-assurance .fa-i i {
-  text-decoration: none;
-  color: #ff0202;
-  font-size: 50px;
-  padding: 20px 20px;
-}
-
-.footer-assurance .fa-i p {
-  font-size: 20px;
-  font-weight: 800;
-  color: #111111;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: "Nunito Sans", sans-serif;
-  font-style: bold;
-}
-
-/* Footer Section Styling */
 #footer-section {
-  background-color: #1a1a1a;
+  background-color: #01303f;
   color: #fff;
   padding: 40px 20px;
   font-family: "Nunito Sans", serif;
@@ -217,11 +202,11 @@
 .footer-address h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-address span {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-address p {
@@ -235,9 +220,9 @@
 }
 
 .footer-links h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-bottom: 15px;
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-links a {
@@ -250,20 +235,18 @@
 }
 
 .footer-links a:hover {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-social-media {
   text-align: center;
 }
-
 .footer-social-media p {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 .footer-social-media span {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }
 
 .footer-social-media ul {
@@ -282,5 +265,5 @@
 }
 
 .footer-social-media ul li a:hover {
-  color: #f4b400;
+  color: rgb(0, 255, 255);
 }

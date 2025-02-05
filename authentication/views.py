@@ -1,81 +1,66 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from django.views import View
+from django.contrib.auth.models import User  #User is inbuilt authentication model provided by the guys at Django
+from django.contrib import messages   #django framework for sending one time notifications 
+from django.conf import settings
 
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
-
-
-# Importing models for authentication app
-from django.db import models 
-from .models import UserRegistration
-
-# importing forms file from auhentication app
-from .forms import RegistrationForm
 # Create your views here.
 
 
 def register(request):
-    registrationform = RegistrationForm()
-    if request.method == "POST":
-        registrationform = RegistrationForm(request.POST)
-        if registrationform.is_valid():
-            username = registrationform.cleaned_data["username"]
-            password = registrationform.cleaned_data["password"]
-            user = UserRegistration.objects.create_user(username=username, password=password)
+    if request.method == 'POST':
+        full_name = request.POST.get('full_name')
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        
+        #checking here that you do not register with existing users
+        
+    user_data_has_error = False  # user_data_has_error is user-defined variable set to a boolean value
+    
+    if User.objects.filter(username=username).exists():
+        user_data_has_error = True
+        messages.error(request, 'Username already exists')
+        
+    if User.objects.filter(email=email).exists():
+        user_data_has_error = True
+        messages.error(request, 'Email already exists')
+        
+        # making sure the set password meets the required length
             
-            login(request, user)
-            form.save()
+        if len(password) < 8:
+                user_data_has_error = True
+                messages.error(request, 'Password must be at least 8 characters long')
             
-            return redirect('index')
-        else :
-            form =RegistrationForm()
-            
-            
-    return render(request, "register.html", {'form': registrationform})
+        if not user_data_has_error:
+            new_user =User.objects.create_user(
+                full_name = full_name,
+                username = username,
+                email = email,
+                password =password,
+              
+            )
+            messages.success(request, 'Account created. Login now')
+            return redirect('login')
+        else:
+            return redirect('register')
+        
+     
+   
+    
+    
+    
+    
+    return render(request, "register.html") 
 
 def login(request):
-    if request.method =="POST":
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        
-        if user is not None:
-            if user.is_active:
-                login(request, user)
-                
-                request.POST.get('next') or request.GET.get('next') or 'index'
-                return redirect('next_url')
-            else:
-                error_message = 'Invalid Credentials'
-                
-              
-        return render(request, "login", {'error': error_message})
     return render(request, 'login.html')
     
 def logout(request):
-      if request.method =="POST":
-          logout(request)
-          return redirect('login')
-      else:
-            return render(request, "index")
+
+     return render(request, 'logout.html')
+
     
-
-# using decorators
-@login_required
-def home_view(request):
-    return render(request, 'index.html')
-
-#Protected View
-class ProtectedView(LoginRequiredMixin, View):
-    login_url = '/login/'
-    redirect_field_name = 'redirect_to'
-    
-def get(self, request, *args, **kwargs):
-        return render(request, 'protected_view.html')
-
 
 

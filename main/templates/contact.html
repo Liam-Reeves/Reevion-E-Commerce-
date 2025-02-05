@@ -5,7 +5,8 @@
   <div class="top-container">
     <p>CONTACT US</p>
   </div>
-  <div class="contact-map">
+  <div class="contact-stuff">
+    <div class="contact-map">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8091639193185!2d36.82052807507137!3d-1.2886929986990576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11747e756f41%3A0x146973898c119b47!2sKenyatta%20International%20Convention%20Centre!5e0!3m2!1sen!2ske!4v1738164193944!5m2!1sen!2ske"
       width="500"
@@ -14,39 +15,86 @@
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+       ></iframe>
   </div>
-  <div class="contact-form">
-    <h3>Send us a message</h3>
-    <form action="">
-      <div class="form-group">
-        <div class="label">
-          <label for="name">Name</label>
+    <form action="" method="POST">
+      <p>Send us a message</p>
+
+      {% csrf_token %}
+      <div class="form-control"> 
+         {{ form.name }}
+        </div> 
+      <div class="form-control"> 
+           {{ form.email }}
         </div>
-        <input type="text" name="name" required />
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label for="name">Email</label>
-        </div>
-        <input type="text" name="name" required />
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label for="name"></label>
-        </div>
-        <input type="text" name="name" required />
-      </div>
-      <div class="form-group">
-        <div class="label">
-          <label for="name">Phone Number</label>
-        </div>
-        <input type="text" name="name" required />
-      </div>
-        <button type="submit"></button>
-      
-    </form>
+    <div class="form-control">  
+       {{ form.phone_number }}
+    </div>
+   <div class="form-control"> 
+        {{ form.message }}
+    </div>
+           <button type="submit">Submit</button>
+      </form>
   </div>
 </div>
+</div>
+<section id="footer-section">
+   <div class="footer-container">
+    <div class="footer-logo">
+      <img src="{% static  'assets/zipky-logo.jpg' %}" alt="" />
+    </div>
+    <div class="footer-address">
+      <h3>Find <span>Us</span></h3>
+      <p><b>Physical location: <br>
+      </b>
+        RNG Plaza, 3rd Floor, Ronald Ngala Street, Nairobi <br>
+        
+        Viking House, 1st Floor, Westlands, Nairobi <br>
+        
+        Beaver House, 1st Floor, Tom Mboya Street, Nairobi <br> 
+
+        <b> Opening Hours: </b><br>
+
+          Mon - Sat <br>
+          
+          9AM - 7PM <br>
+         
+        <b>Sunday</b><br>
+          
+          10AM - 6PM <br>
+          
+         <b>Phone Number:</b><br>
+          
+          (+254) 728274594<br>
+          
+          (+254) 733131155<br>
+          
+          (+254) 725646962</p>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <h3>Quick Links</h3>
+        <a href="">Products</a>
+      <a href="">How to Shop</a>
+        <a href="">Checkout Error</a>
+        <a href="">Terms and Conditions</a>
+       <a href="">Return and Refund Policy</a>
+        <a href="">Privacy Policy</a>
+      </ul>
+    </div>
+    <div class="footer-social-media ">
+      <p>Follow <span>Us:</span> </p>
+    <ul>
+    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li> 
+    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+    </ul>
+        </div>
+
+</section>
+
+
 
 {% endblock %}

@@ -28,5 +28,17 @@ class Brands(models.Model):
     class Meta:
         verbose_name_plural = "Brands"
         
+class Contact(models.Model):
+    name = models.CharField(max_length=255)
+    email= models.EmailField(max_length=255)
+    phone_number = models.CharField(max_length=255)
+    message = models.TextField(max_length=255, default="",)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name_plural = "Contacts"
+        
         
     
