@@ -2,15 +2,18 @@ from django.db import models
 
 # Create your models here.
 
-class ProductImages(models.Model):
-    image= models.ImageField(upload_to='productimages'),
-    title= models.CharField(max_length=255, blank=False, null=True),
+class Product_Listings(models.Model):
+    product_name = models.CharField(max_length=255, default='')
+    product_image= models.ImageField(default=True, null=True,  upload_to='productlistings/')
+    product_price = models.IntegerField(default= 0)
+    product_description = models.TextField(blank=True, max_length= 500, default='')
     
     def __str__(self):
-        return self.title
-    
-    
-    
-    
+        return self.product_name
+        
+    class Meta:
+        verbose_name_plural = "Product_Listings"
 
+    
+    
 

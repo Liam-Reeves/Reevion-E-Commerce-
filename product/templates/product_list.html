@@ -23,7 +23,7 @@
         <button class="back-btn">Back to Home</button>
     <section class="heading-container">
       <div class="product-heading">
-        <a href="{% url 'product_list' %}""><p>SHOP</p></a>
+        <a href="{% url 'product_list' %}"><p>SHOP</p></a>
         <div class="dropdown">
           <button
             class="btn btn-danger dropdown-toggle"
@@ -45,149 +45,21 @@
       </div>
     </section>
     <section class="products-container">
-      <div class="card">
-        <img src="{% static 'assets/mouse_1.png' %}" alt="" />
+      {% for productlistings in productlistings %}
+      <div href ="" class="card">
+        <div class="imgBox">
+            <img src="{{ productlistings.product_image.url }}" alt="" />
+         </div>
         <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-           <div class="imgBox">
-            <img src="{% static 'assets/jbl_bt.png' %}" alt="" />
-           </div>
-        <div class="contentBox">
-          <h3>JBL headphones</h3>
-          <h2 class="price">KSh 2500</h2>
+          <h3>{{ productlistings.product_name }}</h3>
+          <h2 class="price">KSH {{ productlistings.product_price}}</h2>
           <button class="buy" href="{% url 'cart' %}">Add to Cart</button>
           <button class="buy" href="">Quick View</button>
           <p></p>
         </div>
       </div>
-      <div class="card">
-          <div class="imgBox">
-               <img src="{% static 'assets/smart_watch.jpg' %}" alt="" />
-          </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-          <div class="imgBox">
-                <img src="{% static 'assets/hp_mouse.png' %}" alt="" />
-          </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-         <div class="imgBox">
-             <img src="{% static 'assets/usb_c.jpg' %}" alt="" />
-         </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBox">
-          <img src="{% static 'assets/powerbank_1.jpg'%}" alt="" />
-        </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBox">
-          <img src="{% static 'assets/keyboard.jpg' %}" alt="" />
-        </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBox">
-          <img src="{% static  'assets/ram.jpg' %}" alt="" />
-        </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBox">
-          <img src="{% static 'assets/usb_b.jpg' %}" alt="" />
-        </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBox">
-          <img src="{% static 'assets/gaming_pc.jpg'%}" alt="" />
-        </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBox">
-          <img src="{% static 'assets/mouse_1.png' %}" alt="" />
-        </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="imgBox">
-          <img src="{% static 'assets/mouse_1.png' %}" alt="" />
-        </div>
-        <div class="contentBox">
-          <h3></h3>
-          <h2 class="price"></h2>
-          <button class="buy" href="">Add to Cart</button>
-          <button class="buy" href="">Quick View</button>
-          <p></p>
-        </div>
-      </div>
-  </section>
+      {% endfor %}
+    </section>
  <section class="pagination-container">
       <ul class="pagination">
         <li class="page-item">
