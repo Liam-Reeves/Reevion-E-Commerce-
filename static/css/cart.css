@@ -5,17 +5,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .cart-top-container {
   display: flex;
-  justify-content: space-around;
+  justify-content:
+
+    space-around;
   align-items: center;
   gap: 20px;
 }
+
 .cart-top-container button {
-  background:#007bff;
+  background: #007bff;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -27,14 +32,17 @@ html {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+
 .cart-top-container button:hover {
   background: #09214b;
   color: #fff;
   transform: translateY(-10px);
 }
+
 .cart-section {
   background: #f8f8ff;
 }
+
 .cart-section .cart-top {
   font-family: "Nunito Sans", sans-serif;
   font-size: 30px;
@@ -46,15 +54,18 @@ html {
   letter-spacing: 1px;
   padding-left: 20px;
 }
+
 .cart-container {
   display: flex;
   padding: 20px 20px;
 }
+
 .cart-items {
   display: flex;
   padding: 50px 50px;
   gap: 20px;
 }
+
 .cart-item {
   width: 200px;
   height: 350px;
@@ -63,20 +74,24 @@ html {
   padding-left: 35px;
   border: 1px solid #111111;
 }
+
 .cart-item .cart-item-imgBox img {
   align-items: center;
 }
+
 .cart-item:hover {
   background: #09214b;
   box-shadow: -5px 5px 10px #111111;
   transform: scale(1.1);
   color: #f8f8ff;
 }
+
 .cart-item img {
   width: 150px;
   height: 150px;
   object-position: 0ch;
 }
+
 .cart-item .remove {
   background: #09214b;
   color: #fff;
@@ -84,14 +99,17 @@ html {
   font-size: 14px;
   padding: 10px 20px;
 }
+
 .cart-item .remove:hover {
-  background:  #007bff;
+  background: #007bff;
   color: #fff;
 }
+
 .cart-item .quantity {
   padding-top: 5px;
   align-items: center;
 }
+
 .cart-item .quantity input {
   width: 50px;
   height: 30px;
@@ -102,6 +120,7 @@ html {
   background: #f8f8ff;
   border: none;
 }
+
 .cart-item .quantity .decrease {
   width: 30px;
   height: 30px;
@@ -109,6 +128,7 @@ html {
   color: #fff;
   cursor: pointer;
 }
+
 .cart-item .quantity .increase {
   width: 30px;
   height: 30px;
@@ -124,9 +144,10 @@ html {
   text-align: center;
   letter-spacing: 1px;
   padding-left: 20px;
-  background:#007bff ;
+  background: #007bff;
   color: #fff;
 }
+
 .cart-summary {
   width: 300px;
   margin-left: 60px;
@@ -138,11 +159,13 @@ html {
   transition: 0.3s ease-in-out;
   height: 400px;
 }
+
 .cart-summary:hover {
   box-shadow: -5px 5px 10px #111111;
   transform: scale(1.1);
   color: #f8f8ff;
 }
+
 .cart-summary-item p {
   font-size: 14px;
   font-weight: 600;
@@ -153,6 +176,7 @@ html {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .cart-summary-container .checkout {
   background: #09214b;
   color: #fff;

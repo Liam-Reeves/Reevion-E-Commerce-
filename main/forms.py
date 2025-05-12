@@ -7,6 +7,7 @@ class NewsletterForm(forms.ModelForm):
    class Meta:
          model = Newsletter
          fields = ['email',]
+         
 email =forms.EmailField(
       widget= forms.EmailInput(
             attrs={
@@ -17,18 +18,56 @@ email =forms.EmailField(
 )    
 
 class ContactForm(forms.ModelForm):
-      
- class Meta:
+      class Meta:
          model = Contact
          fields = ['name','email','phone_number','message']
-         
-name = forms.CharField(widget=forms.TextInput(attrs={"placeholder": "Enter your name"} ),max_length=100)
-
-email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control',"placeholder": "Enter your email adddress", }), max_length=100)
-
-phone_number = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control',"placeholder": "Enter your phone number", }), max_length=10)
-
-message = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','placeholder': 'Message',}),max_length=500)
 
     
+   
+name = forms.CharField(
+      label="",
+      max_length=100,
+      widget=forms.TextInput(
+            attrs={'placeholder': 'Name',
+                   'class': ' contact-input',
+                   'style': 'width: 200px; height: 40px;',
+                   }
+            )
+      ,
+   
+      )
+
+email = forms.EmailField(
+      label="",
+      max_length=100,
+      widget=forms.EmailInput(
+            attrs={'class': 'contact-input',
+                   'placeholder': 'Email address', 
+                     'style': 'width: 200px; height: 40px;',
+       }
+), 
+      )
+phone_number = forms.CharField(
+      label="",
+      max_length=10,
+      widget=forms.TextInput(
+            attrs={
+                  'class': 'contact-input',
+                   'placeholder': 'Phone number',
+                     'style': 'width: 200px; height: 40px;', 
+   }),
+      )
+message = forms.CharField(
+      label="",
+      max_length=500,
+      widget=forms.Textarea(
+            attrs={
+            'class': 'contact-input',
+            'placeholder': 'Message',
+            'style': 'width: 400px; height: 100px;',
+            }
+      ),
+ )
+
+
               

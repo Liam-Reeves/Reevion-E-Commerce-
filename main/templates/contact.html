@@ -21,18 +21,10 @@
       <p>Send us a message</p>
 
       {% csrf_token %}
-      <div class="form-control"> 
-         {{ form.name }}
-        </div> 
-      <div class="form-control"> 
-           {{ form.email }}
-        </div>
-    <div class="form-control">  
-       {{ form.phone_number }}
-    </div>
-   <div class="form-control"> 
-        {{ form.message }}
-    </div>
+      {{ form.as_p }}
+      
+     
+    
            <button type="submit">Submit</button>
       </form>
   </div>

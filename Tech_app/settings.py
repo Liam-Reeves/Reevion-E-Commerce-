@@ -17,9 +17,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,11 +33,31 @@ INSTALLED_APPS = [
      'product',
      'cart',
      'authentication',
+     ##DJANGOALLAUTH PACKAGES FOR SOCIAL AUTHENTICATION
+     'allauth',
+     'allauth.account',
+     'allauth.socialaccount',
+     'allauth.socialaccount.providers.google',
+    #  'allauth.socialaccount.providers.apple',
      
     
 ]
 
+# Database
+SITE_ID = 1
+
+
+AUTHENTICATION_BACKENDS =[
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 MIDDLEWARE = [
+    #ALLAUTH MIDDLEWARE
+    'allauth.account.middleware.AccountMiddleware',
+        
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -43,9 +65,21 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
+SOCIALACCOUNT_PROVIDERS = {
+    'google':{
+        'APP': {
+            'client_id': '104206039547-oo9nt1mqh32d9mnrd79fko0a42ncni3i.apps.googleusercontent.com',
+            'secret': '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',
+            'key': ''
+        }
+        
+    }
+}
 
 ROOT_URLCONF = 'Tech_app.urls'
+
 
 TEMPLATES = [
     {

@@ -54,25 +54,41 @@ html {
   justify-content: center;
   align-items: center;
 }
-.register-form form button {
-  width: 200px;
-  height: 50px;
-  background: #09214b;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+.register-input{
+  color:#111111;
   font-size: 14px;
   font-weight: 700;
   font-family: "Nunito Sans", sans-serif;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 5px;
+
 }
-.register-form form button:hover {
-  background: rgb(231, 216, 77);
+form .register-link{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .register-link a{
+  color: #fff;
+  background-color: #09214b;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+form .register-link a:hover{
   color: #09214b;
-  transform: translateY(-10px);
+  background-color: rgb(231, 216, 77);;
   border: 2px solid #111111;
 }
+
 .register-form h1 {
   color: #09214b;
   font-size: 30px;
@@ -82,42 +98,17 @@ html {
   padding-bottom: 20px;
   text-transform: uppercase;
 }
-.register-form .form-group .register-input {
-  background: #f8f9fa;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 20px;
-  border: 1px solid #09214b;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: "Nunito Sans", sans-serif;
-}
-.register-form .form-group input{
-  width: 200px;
-  height: 40px; 
-}
-.register-form .form-group input:focus {
-  border: 1px solid #09214b;
-  outline-color: rgb(0, 255, 255);
-}
-.register-form .label label {
-  font-size: 16px;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 600;
-  color: #09214b;
-  letter-spacing: 1px;
-}
-.login-link a {
+
+form .login-link a {
   color: #09214b;
   font-size: 14px;
   font-weight: 700;
   font-family: "Nunito Sans", sans-serif;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+  padding-top: 30px;
+
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
+
 }
