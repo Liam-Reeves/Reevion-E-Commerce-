@@ -110,11 +110,11 @@
     </div>
     <form method="POST" action="{% url 'index' %}">
         {% csrf_token %}
-        <!-- {{ form.as_p }} -->
-        <div class="nlt-form">
-          {{newsletterform.email}}
+        {{ newsletterform.as_p }}
+       
+       
         <a href="{% url  'subscribe' %}"><button type="submit">Subscribe</button></a>
-          </div>
+        
       </form>
   </div>
 </section>

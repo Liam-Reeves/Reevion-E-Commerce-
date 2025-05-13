@@ -31,7 +31,7 @@ class Brands(models.Model):
 class Contact(models.Model):
     name = models.CharField(max_length=255)
     email= models.EmailField(max_length=255)
-    phone_number = models.CharField(max_length=255)
+    phone_number = models.CharField(max_length=10)
     message = models.TextField(max_length=255, default="",)
     
     def __str__(self):

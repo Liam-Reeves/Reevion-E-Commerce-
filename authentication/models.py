@@ -9,5 +9,4 @@ class UserRegistration(models.Model):
         return self.username
     class Meta:
         verbose_name_plural = "User Registration"
-    
 

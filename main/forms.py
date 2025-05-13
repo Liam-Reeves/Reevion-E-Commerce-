@@ -9,6 +9,7 @@ class NewsletterForm(forms.ModelForm):
          fields = ['email',]
          
 email =forms.EmailField(
+      label="",
       widget= forms.EmailInput(
             attrs={
                   'class': 'nls-input',
@@ -23,48 +24,39 @@ class ContactForm(forms.ModelForm):
          fields = ['name','email','phone_number','message']
 
     
-   
-name = forms.CharField(
-      label="",
-      max_length=100,
+      name = forms.CharField( label="",  max_length=255,
       widget=forms.TextInput(
             attrs={'placeholder': 'Name',
                    'class': ' contact-input',
-                   'style': 'width: 200px; height: 40px;',
+                
                    }
             )
       ,
    
       )
 
-email = forms.EmailField(
-      label="",
-      max_length=100,
-      widget=forms.EmailInput(
-            attrs={'class': 'contact-input',
+      email = forms.EmailField(label="", max_length=255,
+      widget= forms.EmailInput(
+            attrs={
+                  'class': 'contact-input',
                    'placeholder': 'Email address', 
-                     'style': 'width: 200px; height: 40px;',
-       }
+            }
 ), 
       )
-phone_number = forms.CharField(
-      label="",
-      max_length=10,
+      phone_number = forms.CharField(label="", max_length=10,
       widget=forms.TextInput(
             attrs={
                   'class': 'contact-input',
                    'placeholder': 'Phone number',
-                     'style': 'width: 200px; height: 40px;', 
-   }),
+            }
       )
-message = forms.CharField(
-      label="",
-      max_length=500,
-      widget=forms.Textarea(
+      )
+      message = forms.CharField(label="",max_length=255,
+      widget= forms.Textarea(
             attrs={
-            'class': 'contact-input',
+            'class': 'contact-message',
             'placeholder': 'Message',
-            'style': 'width: 400px; height: 100px;',
+       
             }
       ),
  )

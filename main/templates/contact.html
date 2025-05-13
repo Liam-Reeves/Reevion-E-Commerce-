@@ -1,35 +1,37 @@
 {% extends 'layout.html' %} {% load static %} {% block body %}
-
 <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
-<div class="main-contact-container">
-  <div class="top-container">
-    <p>CONTACT US</p>
-  </div>
-  <div class="contact-stuff">
-    <div class="contact-map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8091639193185!2d36.82052807507137!3d-1.2886929986990576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11747e756f41%3A0x146973898c119b47!2sKenyatta%20International%20Convention%20Centre!5e0!3m2!1sen!2ske!4v1738164193944!5m2!1sen!2ske"
-      width="500"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-       ></iframe>
-  </div>
-    <form action="" method="POST">
-      <p>Send us a message</p>
-
-      {% csrf_token %}
-      {{ form.as_p }}
+<section class="contact-section">
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    <div class="contact-info">
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8768.439187458192!2d36.821541686955534!3d-1.2918952546584341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11747e756f41%3A0x146973898c119b47!2sKenyatta%20International%20Convention%20Centre!5e0!3m2!1sen!2ske!4v1747151167774!5m2!1sen!2ske"  
+        width="600" 
+        height="450"
+         style="border:0;" allowfullscreen=""
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+      </div>
+      <div class="contact-form">
+        <h2>Send us a message</h2>
+        <form action="">
+          {% csrf_token %}
+          {{ contactform.as_p}}
+          
       
-     
+        </form>
+        <button href="" type="submit">Submit</button>
+
+      </div>
+    </div>
+
     
-           <button type="submit">Submit</button>
-      </form>
-  </div>
-</div>
-</div>
+  </section>
+
+
+
+
 <section id="footer-section">
    <div class="footer-container">
     <div class="footer-logo">

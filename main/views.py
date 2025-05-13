@@ -31,24 +31,26 @@ def about(request):
 
 def contact(request):
     contactform = ContactForm()
-    if request.method == "POST":
-           contactform = ContactForm(request.POST)  
-        
-    if contactform.is_valid():
-            name = contactform.cleaned_data['name']
-            email = contactform.cleaned_data['email']
-            message = contactform.cleaned_data['message']
-            phone_number = contactform.cleaned_data['phone_number']
-            
-            contact = Contact(name=name, email=email, message=message,phone_number= phone_number)      
-            contact.save()
-            
-            return redirect('contact_success')
-    else:
-        contactform=ContactForm()
-        
     
-    return render (request, 'contact.html', {'form':contactform})
+    if(request.method == 'POST'):
+        #place the form in a parameter
+        contactform =ContactForm(request.POST)
+        
+        #VALIDATING THE FORM
+        if contactform.is_valid():
+            #CHECK WHETHER DATA IS CORRECT
+            
+            name= contactform.cleaned_data['name']
+            email= contactform.cleaned_data['email']
+            phone_number= contactform.cleaned_data['phone_number']
+            message= contactform.cleaned_data['message']
+                   
+            contactform.save()
+            return redirect('contact_success')
+        else:
+            contactform = ContactForm()
+ 
+    return render (request, 'contact.html', {'contactform':contactform})
 def contact_success(request):
     return render(request, 'contact_success.html')
 def subscribe(request):
