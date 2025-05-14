@@ -1,13 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Newsletter(models.Model):
-    email= models.EmailField(max_length=100, default="")
-    def __str__(self):
-        return self.email
-    class Meta:
-        verbose_name_plural = "Newsletters"
-        
+
         
 class Featured_Products(models.Model):
     image =models.ImageField(default=True, upload_to="featured_products")

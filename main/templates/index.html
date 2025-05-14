@@ -101,23 +101,7 @@
     </div>
     {% endfor %}
  </section>
-<!-- Newsletter Section -->
-<section id="nlt-section">
-  <div class="nlt-container">
-    <div class="nlt-text">
-      <h2>Subscribe to our <span>Channels</span></h2>
-      <p>Stay updated with the latest products and offers</p>
-    </div>
-    <form method="POST" action="{% url 'index' %}">
-        {% csrf_token %}
-        {{ newsletterform.as_p }}
-       
-       
-        <a href="{% url  'subscribe' %}"><button type="submit">Subscribe</button></a>
-        
-      </form>
-  </div>
-</section>
+
 <!-- Footer  section -->
 <section id="footer-section">
   <div class="footer-container">
@@ -173,7 +157,11 @@
     <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
     </ul>
         </div>
+
 </section>
+<footer class="copyright">
+  &copy; 2025 Liam Reeves Web Agency. All rights reserved.
+</footer>
 
 
 

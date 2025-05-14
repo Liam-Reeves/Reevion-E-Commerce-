@@ -1,22 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from django.db import models
-from .models import Newsletter,Contact
-
-class NewsletterForm(forms.ModelForm):
-   class Meta:
-         model = Newsletter
-         fields = ['email',]
-         
-email =forms.EmailField(
-      label="",
-      widget= forms.EmailInput(
-            attrs={
-                  'class': 'nls-input',
-                  'placeholder': 'Enter your email adddress',
-            }
-      )
-)    
+from .models import Contact
 
 class ContactForm(forms.ModelForm):
       class Meta:
