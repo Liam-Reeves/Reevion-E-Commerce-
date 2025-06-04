@@ -53,7 +53,7 @@
         <div class="contentBox">
           <h3>{{ productlistings.product_name }}</h3>
           <h2 class="price">KSH {{ productlistings.product_price}}</h2>
-          <button class="buy" href="{% url 'add_to_cart' %}">Add to Cart</button>
+          <button class="buy" href="">Add to Cart</button>
           <button class="buy" href="">Quick View</button>
           <p></p>
         </div>
@@ -139,6 +139,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="{% static 'js/product.js' %}"></script>
     <script src="{% static 'js/cart.js' %}"></script>
   </body>
 </html>

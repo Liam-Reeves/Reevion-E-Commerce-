@@ -496,3 +496,164 @@ footer {
   text-align: center;
   font-family: "Raleway", sans-serif;
 }
+@media (max-width: 900px) {
+  .ld-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ld-container img {
+    width: 80vw;
+    max-width: 350px;
+  }
+
+  .ctg-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ctg-card {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .why-us-card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .why-us-card {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .ft-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ft-card {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .brand-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brand-imgs img {
+    width: 120px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+/* =======================
+   Mobile styles
+   ======================= */
+@media (max-width: 600px) {
+  .ld-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .ld-container img {
+    width: 90vw;
+    max-width: 220px;
+  }
+
+  .slide-in,
+  .slide-in-right {
+    font-size: 1.1rem;
+  }
+
+  #home-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7em 0;
+  }
+
+  .ctg-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ctg-card {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .why-us-card-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .why-us-card {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .ft-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ft-card {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .brand-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .brand-imgs img {
+    width: 90px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+
+  .footer-address,
+  .footer-links,
+  .footer-social-media {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* =======================
+   Small text for mobile
+   ======================= */
+@media (max-width: 400px) {
+
+  .slide-in,
+  .slide-in-right,
+  .why-us-heading,
+  .ft-section h1,
+  .brand-section h1 {
+    font-size: 1rem;
+  }
+
+  #home-btn {
+    font-size: 0.9rem;
+  }
+}

@@ -124,5 +124,96 @@ form .register-link{
   letter-spacing: 1px;
 }
 
+/* =======================
+   Tablet styles
+   ======================= */
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .login-load img {
+    width: 60vw;
+    max-width: 300px;
+  }
+
+  .login-form-input {
+    width: 80vw;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* =======================
+     Mobile styles
+     ======================= */
+@media (max-width: 600px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .login-load-text h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .login-load img {
+    width: 80vw;
+    max-width: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .login-form-input {
+    width: 100vw;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .login-form-input h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .form-group .label label {
+    font-size: 1rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+    padding: 0.6em;
+  }
+
+  .login-link a,
+  .register-link a {
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* =======================
+     Small text for very small screens
+     ======================= */
+@media (max-width: 400px) {
+
+  .login-load-text h1,
+  .login-form-input h1 {
+    font-size: 1rem;
+  }
+
+  .form-group .label label {
+    font-size: 0.95rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+  } }
 
 

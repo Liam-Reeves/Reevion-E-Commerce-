@@ -6,3 +6,5 @@ from product.models import Product_Listings
 from .models import Cart, CartItem
 # Create your views here.
 
+def cart_view(request):
+    return render(request, 'cart.html')

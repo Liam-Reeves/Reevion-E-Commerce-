@@ -193,3 +193,119 @@ html {
   background: #007bff;
   color: #fff;
 }
+
+
+/* =======================
+   Tablet styles
+   ======================= */
+@media (max-width: 900px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5vw;
+  }
+
+  .cart-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .cart-item {
+    width: 45vw;
+    min-width: 220px;
+    max-width: 320px;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+
+  .cart-summary {
+    width: 80vw;
+    max-width: 350px;
+    margin: 30px auto 0 auto;
+    height: auto;
+  }
+}
+
+/* =======================
+     Mobile styles
+     ======================= */
+@media (max-width: 600px) {
+  .cart-top-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .cart-section .cart-top {
+    font-size: 1.3rem;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 2vw;
+  }
+
+  .cart-items {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .cart-item {
+    width: 95vw;
+    min-width: 150px;
+    max-width: 99vw;
+    height: auto;
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+
+  .cart-item img,
+  .cart-item .cart-item-imgBox img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cart-summary {
+    width: 95vw;
+    max-width: 99vw;
+    margin: 20px auto 0 auto;
+    padding: 10px 5px;
+    height: auto;
+  }
+
+  .cart-summary-heading {
+    font-size: 1.1rem;
+    padding-left: 0;
+  }
+
+  .cart-summary-container .checkout {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+}
+
+/* =======================
+     Small text for very small screens
+     ======================= */
+@media (max-width: 400px) {
+
+  .cart-section .cart-top,
+  .cart-summary-heading {
+    font-size: 1rem;
+  }
+
+  .cart-item p,
+  .cart-summary-item p {
+    font-size: 0.95rem;
+  }
+ }
